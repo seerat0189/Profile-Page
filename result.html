@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Result</title>
+</head>
+<style>
+    body {
+      background-color: #f5e1f4;
+    
+    font-size : 28px; 
+      font-weight: bold;
+      }
+      #logout {
+    font-size: 30px; 
+    padding: 10px 20px;
+    color:#233c51; 
+    background: #f1b534;
+    font-weight: bold; 
+    }
+    
+    * {
+    background-color: #233c51;
+    color: #f1b534;
+    }
+    </style>
+<body>
+  <div class="container">
+    <h1>Test Result</h1>
+    <p>Marks scored: <span id="score"></span></p>
+    <p>Total marks: <span id="total"></span></p>
+    <p>Percentage obtained: <span id="percentage"></span>%</p>
+    <p>Correct answers: <span id="correct"></span></p>
+    <p>Incorrect answers: <span id="incorrect"></span></p>
+    <p id="message"></p>
+    <button id="logout">Logout</button>
+  </div>
+
+  <script>// Retrieve query parameters
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    
+    const score = urlParams.get('score');
+    const total = urlParams.get('total');
+    const percentage = urlParams.get('percentage');
+    const message = decodeURIComponent(urlParams.get('message'));
+    
+    // Display results on the result page
+    document.getElementById('score').textContent = score;
+    document.getElementById('total').textContent = total;
+    document.getElementById('percentage').textContent = percentage;
+    document.getElementById('correct').textContent = score;
+    document.getElementById('incorrect').textContent = total - score;
+    document.getElementById('message').textContent = message;
+    document.getElementById('logout').addEventListener('click', function () {
+            // Redirect to the login page
+            window.location.href = 'login.html'; // Replace 'login.html' with your login page URL
+        })
+    </script>
+</body>
+</html>

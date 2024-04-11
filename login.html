@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validated Login Form</title>
+    
+</head>
+<style>
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background-color: #f5e1f4;
+	background-size: cover;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	font-family: sans-serif;
+}
+.container{
+	position: relative;
+	margin-top: 100px;
+	width: 450px;
+	height: auto;
+	background: #dedede;
+	border-radius: 5px;
+}
+.label{
+	padding: 20px 130px;
+	font-size: 35px;
+	font-weight: bold;
+	color: #130f40;
+}
+.login_form{
+	padding: 20px 40px;
+}
+.login_form .font{
+	font-size: 18px;
+	color: #130f40;
+	margin: 5px 0;
+}
+.login_form input{
+	height: 40px;
+	width: 350px;
+	padding: 0 5px;
+	font-size: 18px;
+	outline: none;
+	border: 1px solid silver;
+}
+.login_form .font2{
+	margin-top: 30px;
+}
+.login_form button{
+	margin: 45px 0 30px 0;
+	height: 45px;
+	width: 365px;
+	font-size: 20px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	font-weight: bold;
+	background: #1A237E;
+	border-radius: 3px;
+	border: 1px solid #3949AB;
+	transition: .5s;
+}
+.login_form button:hover{
+	background: #151c6a;
+}
+.login_form #email_error,
+.login_form #pass_error{
+	margin-top: 5px;
+	width: 345px;
+	font-size: 18px;
+	color: #C62828;
+	background: rgba(255,0,0,0.1);
+	text-align: center;
+	padding: 5px 8px;
+	border-radius: 3px;
+	border: 1px solid #EF9A9A;
+	display: none;
+}</style>
+<body>
+    <section class="main">
+        <div class="container">
+            <!-- Your login form -->
+            <form class="login_form" action="#" method="post" name="form" onsubmit="return validateForm()">
+                <div class="col">
+                    <input autocomplete="off" type="text" name="username" placeholder="Username">
+                </div>
+                <div class="col">
+                    <input autocomplete="off" type="text" name="email" placeholder="Email or Phone">
+                </div>
+                <div class="col">
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <button type="submit" id="login">Login</button>
+            </form>
+        </div>
+    </section>
+<script>
+	
+	function validateForm() {
+	
+	  return true; 
+	}
+  
+	document.addEventListener('DOMContentLoaded', function() {
+	  const loginForm = document.forms['form']; 
+  
+	  loginForm.addEventListener('submit', function(event) {
+		event.preventDefault(); 
+  
+		const isValid = validateForm(); 
+  
+		if (isValid) {
+	
+		  window.location.href = 'index.html'; 
+		} else {
+		  console.log('Form validation failed. Please check your inputs.');
+		  
+		}
+		if (username.trim() === '' || email.trim() === '' || password.trim() === '') {
+    alert('Please fill in all fields.');
+    return false;
+  }
+  function validateForm() {
+  const username = document.forms['form']['username'].value;
+  const email = document.forms['form']['email'].value;
+  const password = document.forms['form']['password'].value;
+
+  // Check if fields are not empty
+  if (username.trim() === '' || email.trim() === '' || password.trim() === '') {
+    alert('Please fill in all fields.');
+    return false;
+  }
+
+  // Validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert('Please enter a valid email address.');
+    return false;
+  }
+
+  // Validate password length
+  if (password.length < 5 || password.length > 9) {
+    alert('Password length should be between 5 and 9 characters.');
+    return false;
+  }
+  if (password.length < 5 || password.length > 9) {
+    alert('Password length must be between 5 and 9 characters.');
+    return false;
+  }
+
+  return true; // Return true if all validations pass
+}
+
+
+ 
+  
+	  });
+	});
+  </script>
+  </script>
+</body>
+
+</html>

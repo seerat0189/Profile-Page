@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #ededed;
+    background: #01075d;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #01075d;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.navbar a {
+    font-size: 18px;
+    color:#ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.4s;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #4afcfc;
+}
+
+.about {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    margin-top: 15%;
+}
+
+.about-content #heading1 {
+    position: relative;
+    font-size: 56px;
+    margin-top: 10%;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.about-content #heading1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #01075d;
+    animation: showRight 1.6s ease forwards;
+    animation-delay: 1s;
+}
+
+.about-content p {
+    position: relative;
+    font-size: 19px;
+    color: #4afcfc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.about-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #01075d;
+    animation: showRight 2s ease forwards;
+    animation-delay: 1.7s;
+}
+
+.about-content > .about-hobbies {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-content #heading2 {
+    position: relative;
+    font-size: 56px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.about-content #heading2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #01075d;
+    animation: showRight 1.6s ease forwards;
+    animation-delay: 2.3s;
+}
+
+#pic1, #pic2, #pic3 {
+    margin-top: 2%;
+    height: 300px;
+    width: 300px;
+}
+
+.about-hobbies-exp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hobby {
+    position: relative;
+    margin-top: 1%;
+    height: 300px;
+    width: 300px;
+    color: #4afcfc;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+
+.hobby::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #01075d;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.8s;
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}

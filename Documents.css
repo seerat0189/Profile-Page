@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #ededed;
+    background: #21161a;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #21161a;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.navbar a {
+    font-size: 18px;
+    color:#ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.4s;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #fbde9a;
+}
+
+.documents {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    margin-top: 0;
+}
+
+.documents-content h1 {
+    position: relative;
+    font-size: 56px;
+    margin-top: -50%;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 700;
+    width: 300px;
+}
+
+.documents-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #21161a;
+    animation: showRight 1.3s ease forwards;
+    animation-delay: 1s;
+}
+
+.documents-content ol {
+    position: relative;
+    font-size: 28px;
+    color: #fbde9a;
+    text-decoration: none;
+    font-weight: 500;
+    width: 300px;
+}
+
+.documents-content ol::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #21161a;
+    animation: showRight 1.5s ease forwards;
+    animation-delay: 1.7s;
+}
+
+.documents-content a {
+    color: #fbde9a;
+}
+
+.documents-content a:hover {
+    color: #8f3934;
+}
+
+img {
+    padding-left: 0;
+    margin-left: 55%;
+    margin-top: -20%;
+    height: 400px;
+    width: 700px;
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
